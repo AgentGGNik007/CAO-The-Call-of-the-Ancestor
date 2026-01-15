@@ -1,0 +1,36 @@
+name: Upload ZIP to latest release
+
+on:
+  workflow_run:
+    workflows: ["Build ZIP (auto)"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Upload ZIP to release from data/version.txt (tag already includes v)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TAG="$(tr -d ' \r\n' < data/version.txt)"
+          FILE="releases/zip/cao-the-call-of-the-ancestor-latest.zip"
+
+          test -f "$FILE"
+
+          gh release view "$TAG" >/dev/null 2>&1 || { echo "Release $TAG not found"; exit 1; }
+          gh release upload "$TAG" "$FILE" --clobber
