@@ -1,0 +1,82 @@
+name: Version Update + Release (main)
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: >
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'main' &&
+      github.event.pull_request.head.ref == 'update'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main (latest)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Pull latest main
+        run: |
+          git fetch origin main --prune
+          git reset --hard origin/main
+
+      - name: Bump patch version in module.json
+        id: bump
+        run: |
+          node - <<'NODE'
+          const fs = require("fs");
+          const p = "module.json";
+          const j = JSON.parse(fs.readFileSync(p, "utf8"));
+          const v = (j.version || "0.0.0").trim();
+          const m = v.match(/^(\d+)\.(\d+)\.(\d+)$/);
+          if (!m) { throw new Error(`module.json version not semver x.y.z: "${v}"`); }
+          const major = Number(m[1]), minor = Number(m[2]), patch = Number(m[3]) + 1;
+          const next = `${major}.${minor}.${patch}`;
+          j.version = next;
+          fs.writeFileSync(p, JSON.stringify(j, null, 2) + "\n");
+          fs.writeFileSync(process.env.GITHUB_OUTPUT, `version=${next}\ntag=v${next}\n`, { flag: "a" });
+          NODE
+
+      - name: Commit version bump
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add module.json
+          git commit -m "Release v${{ steps.bump.outputs.version }}"
+          git push origin main
+
+      - name: Tag and push
+        run: |
+          git tag "${{ steps.bump.outputs.tag }}"
+          git push origin "${{ steps.bump.outputs.tag }}"
+
+      - name: Build ZIP (stable asset name)
+        run: |
+          rm -f module-latest.zip
+          zip -r module-latest.zip . \
+            -x ".git/*" \
+            -x ".github/*" \
+            -x "releases/*" \
+            -x "node_modules/*" \
+            -x "*.zip"
+
+      - name: Create GitHub Release + upload asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.bump.outputs.tag }}
+          name: ${{ steps.bump.outputs.tag }}
+          generate_release_notes: true
+          files: |
+            module-latest.zip
