@@ -1,0 +1,32 @@
+<div>
+    {{#if success}}
+
+    <h3>{{localize "mastercrafted.cauldronApp.discovered"}}</h3>
+
+    <div style="padding: 0; margin: 0.5rem 0; display: flex; border-radius: 5px;
+    align-items: center; gap: 1rem; background: #00000040;">
+        <img style="width: 30px;" src="{{recipe.img}}" alt="">
+        <span>{{recipe.name}}</span>
+    </div>
+    
+    <p class="notes">{{localize "mastercrafted.cauldronApp.gmConfirm"}}</p>
+
+    <button class="confirm-recipe-discovery" data-book-id="{{recipe.recipeBook.id}}" data-recipe-id="{{recipe.id}}" data-user-id="{{userId}}"><i class="fa-duotone fa-badge-check"></i> {{localize "mastercrafted.cauldronApp.confirm"}}</button>
+
+    {{else}}
+
+    <p class="notes">{{message}}</p>
+
+    <h3>{{localize "mastercrafted.cauldronApp.partial.consumed"}}</h3>
+    <ol style="margin: 0; padding: 0;">
+    {{#each ingredients}}
+    <li style="list-style: none; padding: 0; margin: 0.5rem 0; display: flex; border-radius: 5px;
+    align-items: center; gap: 1rem; background: #00000040;">
+        <img style="width: 30px;" src="{{this.img}}" alt="">
+        <span>{{this.name}}</span>
+    </li>
+    {{/each}}
+    </ol>
+    {{/if}}
+
+</div>
