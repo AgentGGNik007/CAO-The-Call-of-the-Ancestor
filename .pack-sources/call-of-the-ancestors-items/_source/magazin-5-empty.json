@@ -1,0 +1,17 @@
+{
+  "_id": "mag_5_empty",
+  "name": "Magazin 5 (Empty)",
+  "type": "loot",
+  "folder": "F_MAG_EMPTY",
+  "system": {
+    "description": { "value": "<p>An empty 5-round magazine.</p>", "chat": "" },
+    "quantity": 1,
+    "weight": { "value": 0, "units": "lb" },
+    "price": { "value": 0, "denomination": "cp" },
+    "identified": true
+  },
+  "effects": [],
+  "flags": {
+    "cao-empty-magazin": true
+  }
+}
