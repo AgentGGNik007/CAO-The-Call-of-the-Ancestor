@@ -57,7 +57,7 @@
                 "ingredients": "Ingredients",
                 "result": "Result"
             },
-            "title": "Mastercrafted",
+            "title": "Workbench",
             "addRecipeBook": "Add Recipe Book",
             "filter": "Toggle All/Craftable",
             "relinked": "One or more Items were missing references and have been relinked.",
@@ -97,7 +97,7 @@
             }
         },
         "itemConfig": {
-            "title": "Mastercrafted - Item Configuration",
+            "title": "CAO-Crafting",
             "sheetButton": "",
             "attributePath": {
                 "label": "Attribute Path"
