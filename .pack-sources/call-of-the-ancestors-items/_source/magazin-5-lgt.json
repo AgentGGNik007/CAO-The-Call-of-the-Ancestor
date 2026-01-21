@@ -1,0 +1,15 @@
+{
+  "_id": "mag_5_lgt",
+  "name": "Magazin 5 (LGT)",
+  "type": "loot",
+  "folder": "F_MAG_BASE",
+  "system": {
+    "description": { "value": "<p>A 5-round magazine (LGT).</p>", "chat": "" },
+    "quantity": 1,
+    "weight": { "value": 0, "units": "lb" },
+    "price": { "value": 0, "denomination": "cp" },
+    "identified": true
+  },
+  "effects": [],
+  "flags": {}
+}
