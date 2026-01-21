@@ -1,0 +1,117 @@
+{
+    "mastercrafted": {
+        "UI": {
+            "default-recipe-name": "Neues Rezept",
+            "delete-recipe-book-content": "Möchten Sie dieses Rezeptbuch wirklich löschen?",
+            "delete-recipe-book-title": "Rezeptbuch löschen",
+            "delete-recipe-content": "Möchten Sie dieses Rezept wirklich löschen?",
+            "delete-recipe-title": "Rezept löschen",
+            "no-permission": "Sie sind nicht berechtigt, dieses Rezept oder Buch zu öffnen.",
+            "open-recipe-app": "Rezeptmanager"
+        },
+        "craft": "Basteln",
+        "craftDialog": {
+            "cancel": "Stornieren",
+            "consumes": "Verbraucht",
+            "craft": "Handwerk",
+            "crafted": "Gefertigt",
+            "crafts": "Kunsthandwerk",
+            "title": "Basteln"
+        },
+        "recipeApp": {
+            "addRecipeBook": "Rezeptbuch hinzufügen",
+            "bookcontext": {
+                "add": "Rezept hinzufügen",
+                "delete": "Löschen",
+                "duplicate": "Duplikat",
+                "edit": "Bearbeiten",
+                "export": "Export",
+                "import": "Importieren"
+            },
+            "configbookrecipe": {
+                "permissions": {
+                    "allow": "Erlauben",
+                    "default": "Standard",
+                    "deny": "Leugnen"
+                }
+            },
+            "craft": "Fertigen - Halten Sie die Strg-Taste gedrückt, um schnell zu erstellen",
+            "craftError": "Bastelfehler",
+            "craftFailConsumed": "Basteln fehlgeschlagen! \nDie Bedingung war nicht erfüllt und die Zutaten wurden verbraucht.",
+            "craftFailNotConsumed": "Basteln fehlgeschlagen! \nDie Bedingung war nicht erfüllt und die Zutaten wurden nicht verbraucht.",
+            "craftSuccess": "Basteln erfolgreich! \nZum Inventar hinzugefügt:",
+            "craftSuccessTimed": "Basteln erfolgreich! \nDie folgenden Gegenstände werden hinzugefügt, sobald die Herstellung abgeschlossen ist:",
+            "editcreatebook": {
+                "book": "Buch",
+                "confirm": "Bestätigen",
+                "create": "Erstellen",
+                "description": "Beschreibung",
+                "edit": "Bearbeiten",
+                "image": "Bild",
+                "macro": "Zustand",
+                "macroplaceholder": "Makroname oder Befehl",
+                "name": "Name",
+                "namep": "Neues Buch",
+                "permission": "Spielerberechtigung",
+                "recipe": "Rezept",
+                "sound": "Klang",
+                "time": "Zeit",
+                "timeplaceholder": "Herstellungszeit in Minuten",
+                "title": "Buch bearbeiten/erstellen",
+                "tools": "Werkzeug",
+                "toolsplaceholder": "Kommagetrennte Liste von Werkzeugnamen"
+            },
+            "errors": {
+                "alreadyingredient": "Dieser Artikel ist bereits in einer Zutat dieses Rezepts enthalten!",
+                "namemissing": "Namensfeld erforderlich!"
+            },
+            "ingredientsTooltip": "Klicken Sie mit der linken Maustaste, um Zutaten zu untersuchen, klicken Sie mit der rechten Maustaste, um eine Zutat auszuwählen",
+            "minutes": "Protokoll",
+            "noTools": "Werkzeug fehlt! \nSie benötigen eines von:",
+            "recipeconfig": {
+                "ingredients": "Zutaten",
+                "ingredientsInspection": "Inhaltskontrolle",
+                "inheritTools": "Werkzeuge erben",
+                "productInspection": "Produktinspektion",
+                "result": "Ergebnis"
+            },
+            "relinked": "Bei einem oder mehreren Artikeln fehlten Referenzen und sie wurden neu verknüpft.",
+            "resultTooltip": "Klicken Sie auf einen Gegenstand, um das Ergebnis zu überprüfen, oder klicken Sie auf seinen Behälter, um ihn als Handwerksergebnis auszuwählen",
+            "searchRecipe": "Suchrezept",
+            "time": "Zeit zum Basteln",
+            "timedCraftCompleted": "Basteln abgeschlossen! \nZum Inventar hinzugefügt:",
+            "title": "Meisterhaft",
+            "tools": "notwendige Werkzeuge",
+            "filter": "Schalte Alle/Herstellbar um",
+            "cauldron": "Kessel"
+        },
+        "show-recipes": "Rezepte anzeigen",
+        "cauldronApp": {
+            "brewFail": "Brühen fehlgeschlagen! \nIhre Mischung hat sich nicht gut vermischen lassen. \nDie Zutaten wurden verbraucht.",
+            "confirm": "Bestätigen",
+            "discovered": "Du hast ein neues Rezept entdeckt!",
+            "gmConfirm": "Ein Spielleiter muss diese Entdeckung bestätigen, bevor sie verwendet werden kann.",
+            "hint": "Ziehen Sie die Zutaten per Drag-and-Drop in den Kessel, um sie zu vermischen. \nKlicken Sie auf eine Zutat, um sie aus dem Kessel zu entfernen. \nKlicken Sie auf die Schaltfläche „Zutaten mischen“, um die Zutaten miteinander zu vermischen. \nWenn sich die Zutaten gut vermischen, entdecken Sie ein neues Rezept. \nDie Zutaten werden verbraucht.",
+            "noIngredients": "Um ein Rezept zu finden, müssen Sie mindestens zwei Zutaten mischen!",
+            "partial": {
+                "consumed": "Verbraucht:",
+                "extra1": "Es war so nah! \nDu hattest es fast geschafft! \nVielleicht hast du etwas zu viel hinzugefügt.",
+                "extra1missing1": "Es sah so aus, als würde es funktionieren, aber das tat es nicht. \nVielleicht haben Sie von etwas zu viel und von etwas anderem zu wenig hinzugefügt.",
+                "extra2": "Es sah so aus, als würde es funktionieren, aber das tat es nicht. \nVielleicht hast du zu viel hinzugefügt.",
+                "missing1": "Es war so nah! \nDu hattest es fast geschafft! \nVielleicht braucht es noch ein bisschen mehr.",
+                "missing2": "Es sah so aus, als würde es funktionieren, aber das tat es nicht. \nVielleicht braucht es mehr von etwas."
+            },
+            "title": "Kessel"
+        },
+        "settings": {
+            "enableCauldron": {
+                "hint": "Aktivieren Sie die Cauldron-Schnittstelle. \nAuf diese Weise können Spieler beliebige Zutaten miteinander mischen, um Rezepte zu entdecken.",
+                "name": "Aktivieren Sie Kessel"
+            },
+            "customQuantityPath": {
+                "hint": "Der Pfad zum Datenwert der Artikelmenge (der Datenpfad beginnt bei „system“. Wenn Ihre Menge beispielsweise in item.system.itemQuantity.value gespeichert ist, würden Sie „itemQuantity.value“ in diese Einstellung einfügen). \nLassen Sie das Feld leer, um den Standardpfad zu verwenden. Passen Sie es nur an, wenn Ihr System nicht den allgemeinen Pfad verwendet.",
+                "name": "Benutzerdefinierter Mengenpfad"
+            }
+        }
+    }
+}
