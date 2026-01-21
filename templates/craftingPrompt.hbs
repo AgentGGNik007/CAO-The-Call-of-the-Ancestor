@@ -1,0 +1,14 @@
+<form id="mastercrafted-confirm-craft">
+    <h3>{{localize "mastercrafted.craftDialog.consumes"}}</h3>
+    <div>
+        {{#each componentsToConsume}}
+                <span>{{this.documentLink}}</span>
+        {{/each}}
+    </div>
+    <h3>{{localize "mastercrafted.craftDialog.crafts"}}</h3>
+    <div>
+        {{#each product.components}}
+                <span>{{this.documentLink}}</span>
+        {{/each}}
+    </div>
+</form>

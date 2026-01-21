@@ -1,0 +1,12 @@
+<form id="mastercrafted-chat-message">
+    <div style="flex-wrap: nowrap;">
+        <img src="{{recipe.img}}" alt="">
+        <h4>{{localize "mastercrafted.craftDialog.crafted"}} <strong>{{rName}}</strong></h4>
+    </div>
+    <hr>
+    <div>
+        {{#each product.components}}
+                <span><img src="{{this.img}}" alt=""> {{this.documentLink}}</span>
+        {{/each}}
+    </div>
+</form>

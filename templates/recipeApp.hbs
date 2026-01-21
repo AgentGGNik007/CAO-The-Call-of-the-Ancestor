@@ -1,0 +1,116 @@
+<div class="journal-sheet-container">
+
+    <aside class="sidebar directory flexcol journal-sidebar">
+
+        <header class="directory-header">
+            <div class="header-search flexrow" style="position: relative;">
+                {{#if craftMode}}
+                <i class="fa-solid fa-filter" id="filter" data-tooltip="{{localize "mastercrafted.recipeApp.filter"}}"></i>
+                {{/if}}
+                <input type="text" name="search" value="" autocomplete="off" placeholder="{{localize "mastercrafted.recipeApp.searchRecipe"}}">
+            </div>
+        </header>
+
+        <nav class="pages-list" aria-label="Journal Entry Table of Contents" data-tooltip-direction="RIGHT">
+            <ol class="directory-list scrollable">
+                {{#each recipeBooks}}
+                <li class="directory-item level1 recipe-book" data-book-id="{{this.id}}"
+                    draggable="true">
+                    <div class="page-heading recipe-book-header">
+                        <img class="recipe-book-img" src="{{this.img}}" alt="">
+                        <div>
+                            <span class="page-title recipe-name">{{this.name}}</span><span style="color: var(--color-text-dark-6);"> ({{this._count}})</span>
+                            <p class="recipe-description">{{this.description}}</p>
+                        </div>
+                    </div>
+                    <ol class="headings recipe-list">
+                        {{#each this.recipes}}
+                        <li class="directory-item level2 recipe" data-recipe-id="{{this.id}}" data-book-id="{{./id}}">
+                            <img class="recipe-img" src="{{this.img}}" alt="">
+                            <span class="page-title" data-action="toggle-recipe">{{this.name}}</span>
+                        </li>
+                        {{/each}}
+                    </ol>
+                </li>
+                {{/each}}
+            </ol>
+        </nav>
+
+        <div class="action-buttons flexrow">
+            {{#unless craftMode}}
+            <button class="create" type="button" data-action="createBook">
+                <i class="fas fa-book"></i> {{localize "mastercrafted.recipeApp.addRecipeBook"}}
+            </button>
+            {{/unless}}
+        </div>
+    </aside>
+
+    <section class="journal-entry-content flexcol" style="overflow: scroll;">
+        {{#each recipeBooks}}
+            {{#each recipes}}
+
+                <div class="mastercrafted-recipe hidden" data-book-id="{{../id}}" data-recipe-id="{{this.id}}">
+                    <header class="mastercrafted-recipe-header">
+                        <div class="title" {{#unless ../../craftMode}}style="justify-content: flex-start;"{{/unless}}>
+                            <img src="{{this.img}}" alt="">
+                            <h1>{{this.name}}</h1>
+                            {{#if ../../craftMode}}
+                            <button class="create" type="button" data-action="craft" data-tooltip="{{localize "mastercrafted.recipeApp.craft"}}">
+                                <i class="fas fa-hammer" style="pointer-events: none;"></i>
+                            </button>
+                            {{/if}}
+                        </div>
+                        {{#if this._hasTools}}
+                        <p>{{localize "mastercrafted.recipeApp.tools"}}: {{#each this._tools}} <span class="tool">{{this}}</span> {{/each}}</p>
+                        {{/if}}
+                        {{#if this.time}}
+                        <p>{{localize "mastercrafted.recipeApp.time"}}: <span class="tool">{{this.time}} {{localize "mastercrafted.recipeApp.minutes"}}</span></p>
+                        {{/if}}
+                        {{#if this.description}}
+                        <p>{{{this.description}}}</p>
+                        {{/if}}
+                    </header>
+                    <h3{{#if ../../craftMode}} data-tooltip="{{localize "mastercrafted.recipeApp.ingredientsTooltip"}}"{{/if}}>{{localize "mastercrafted.recipeApp.recipeconfig.ingredients"}}</h3>
+                    <div class="mastercrafted-ingredients">
+                        {{#each ingredients}}
+                            <div class="mastercrafted-ingredient" data-ingredient-id="{{this.id}}">
+                                {{#each components}}
+                                    <div class="mastercrafted-component component-img" data-component-id="{{this.id}}" data-uuid="{{this.uuid}}" data-tooltip="{{this.name}} (x{{this.quantity}})" style="background-image: url('{{this.img}}');">
+                                        <input type="number" name="quantity" {{#if ../../../../craftMode}}disabled="true"{{/if}} class="mastercrafted-component-amount" value="{{this.quantity}}">
+                                    </div>
+                                {{/each}}
+                            </div>
+                        {{/each}}
+                        {{#unless ../../craftMode}}
+                        <div class="mastercrafted-ingredient">
+                            <span class="empty-ingredient">+</span>
+                        </div>
+                        {{/unless}}
+                    </div>
+                    <h3{{#if ../../craftMode}} data-tooltip="{{localize "mastercrafted.recipeApp.resultTooltip"}}"{{/if}}>{{localize "mastercrafted.recipeApp.recipeconfig.result"}}</h3>
+                    <div class="mastercrafted-results">
+                        {{#each products}}
+                        <div class="mastercrafted-result" data-result-id="{{this.id}}">
+                            {{#each components}}
+                            <div class="mastercrafted-component component-img" data-component-id="{{this.id}}" data-uuid="{{this.uuid}}"
+                                data-tooltip="{{this.name}}" style="background-image: url('{{this.img}}');">
+                                <input type="number" name="quantity" {{#if ../../../../craftMode}}disabled="true"{{/if}} class="mastercrafted-component-amount" value="{{this.quantity}}">
+                            </div>
+                            {{/each}}
+                        </div>
+                        {{/each}}
+                        {{#unless ../../craftMode}}
+                        <div class="mastercrafted-result">
+                            <span class="empty-result">+</span>
+                        </div>
+                        {{/unless}}
+                    </div>
+
+                </div>
+
+            {{/each}}
+        {{/each}}
+
+
+    </section>
+</div>
