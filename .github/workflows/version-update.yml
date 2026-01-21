@@ -62,6 +62,39 @@ jobs:
           git tag "${{ steps.bump.outputs.tag }}"
           git push origin "${{ steps.bump.outputs.tag }}"
 
+            - name: Sync version to update branch (module.json)
+        env:
+          VERSION: ${{ steps.bump.outputs.version }}
+        run: |
+          git fetch origin update --prune
+          git checkout -B update origin/update
+
+          node -e "
+          const fs=require('fs');
+          const p='module.json';
+          const j=JSON.parse(fs.readFileSync(p,'utf8'));
+          j.version=process.env.VERSION;
+          fs.writeFileSync(p, JSON.stringify(j,null,2)+'\n');
+          "
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add module.json
+
+          if git diff --cached --quiet; then
+            echo 'No change on update'
+            exit 0
+          fi
+
+          git commit -m "Sync version v${VERSION}"
+          git push origin update
+
+      - name: Switch back to main for ZIP build
+        run: |
+          git checkout main
+          git reset --hard origin/main
+
+
       - name: Build ZIP (stable asset name)
         run: |
           rm -f module-latest.zip
