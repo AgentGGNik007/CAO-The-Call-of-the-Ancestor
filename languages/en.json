@@ -1,0 +1,130 @@
+{
+    "mastercrafted": {
+        "craft": "Crafting",
+        "show-recipes": "Show Recipes",
+        "craftDialog": {
+            "title": "Crafting",
+            "craft": "Craft",
+            "cancel": "Cancel",
+            "consumes": "Consumes",
+            "crafts": "Crafts",
+            "crafted": "Crafted"
+        },
+        "recipeApp": {
+            "errors": {
+                "namemissing": "Name field required!",
+                "alreadyingredient": "This item is already in an Ingredient of this recipe!"
+            },
+            "bookcontext": {
+                "add": "Add Recipe",
+                "edit": "Edit",
+                "delete": "Delete",
+                "duplicate": "Duplicate",
+                "export": "Export",
+                "import": "Import"
+            },
+            "editcreatebook": {
+                "title": "Edit/Create Book",
+                "name": "Name",
+                "namep": "New Book",
+                "description": "Description",
+                "image": "Image",
+                "sound": "Sound",
+                "confirm": "Confirm",
+                "tools": "Tools",
+                "toolsplaceholder": "Comma separated list of tools names",
+                "macro": "Condition",
+                "macroplaceholder": "Macro Name or Command",
+                "time": "Time",
+                "timeplaceholder": "Crafting time in minutes",
+                "edit": "Edit",
+                "create": "Create",
+                "book": "Book",
+                "recipe": "Recipe",
+                "permission": "Player Permission"
+            },
+            "configbookrecipe": {
+                "permissions": {
+                    "default": "Default",
+                    "allow": "Allow",
+                    "deny": "Deny"
+                }
+            },
+            "recipeconfig": {
+                "inheritTools": "Inherit Tools",
+                "ingredientsInspection": "Ingredients Inspection",
+                "productInspection": "Product Inspection",
+                "ingredients": "Ingredients",
+                "result": "Result"
+            },
+            "title": "Mastercrafted",
+            "addRecipeBook": "Add Recipe Book",
+            "filter": "Toggle All/Craftable",
+            "relinked": "One or more Items were missing references and have been relinked.",
+            "craft": "Craft - Hold Ctrl to quick craft",
+            "searchRecipe": "Search Recipe",
+            "tools": "Required Tools",
+            "time": "Crafting Time",
+            "minutes": "minutes",
+            "craftError": "Crafting error",
+            "craftSuccess": "Crafting successfull! Added to inventory: ",
+            "craftSuccessTimed": "Crafting successfull! The following items will be added once the crafting is complete: ",
+            "timedCraftCompleted": "Crafting completed! Added to inventory: ",
+            "craftFailConsumed": "Crafting failed! The condition was not met and the ingredients were consumed.",
+            "craftFailNotConsumed": "Crafting failed! The condition was not met and the ingredients were not consumed.",
+            "noTools": "Tools missing! You need one of: ",
+            "ingredientsTooltip": "Left Click to Inspect Ingredients, Right Click to Select an Ingredient",
+            "resultTooltip": "Click on an item to Inspect the Result or Click on it's container to select it as the crafting result",
+            "cauldron": "Cauldron",
+            "timedCrafting": "Crafting Progress",
+            "readyIn": "Ready in: "
+        },
+        "cauldronApp": {
+            "title": "Cauldron",
+            "noIngredients": "You need to mix at least two ingredients to discover a recipe!",
+            "brewFail": "Brewing failed! Your concoction did not mix well. The ingredients were consumed.",
+            "hint": "Drag and drop ingredients into the cauldron to mix them together. Click on an ingredient to remove it from the cauldron. Click on the 'Mix Ingredients' button to mix the ingredients together. If the ingredients mix well, you will discover a new recipe. The ingredients will be consumed.",
+            "discovered": "You discovered a new recipe!",
+            "gmConfirm": "A Game Master will need to confirm this discovery before it can be used.",
+            "confirm": "Confirm",
+            "partial": {
+                "consumed": "Consumed:",
+                "extra1": "It was so close! You almost had it! Maybe you added a little too much.",
+                "extra2": "It looked like it was going to work, but it didn't. Maybe you added too much.",
+                "missing1": "It was so close! You almost had it! Maybe it needs a little bit more.",
+                "missing2": "It looked like it was going to work, but it didn't. Maybe it needs more of something.",
+                "extra1missing1": "It looked like it was going to work, but it didn't. Maybe you added too much of something and not enough of something else."
+            }
+        },
+        "itemConfig": {
+            "title": "Mastercrafted - Item Configuration",
+            "sheetButton": "",
+            "attributePath": {
+                "label": "Attribute Path"
+            },
+            "tags": {
+                "label": "Tags",
+                "notes": "Comma separated list of tags. When crafting, the player must have items with at least one of these tags in their inventory."
+            }
+        },
+        "UI": {
+            "open-recipe-app" : "Recipe Manager",
+            "delete-recipe-book-title" : "Delete Recipe Book",
+            "delete-recipe-book-content" : "Are you sure you want to delete this recipe book?",
+            "delete-recipe-title" : "Delete Recipe",
+            "delete-recipe-content" : "Are you sure you want to delete this recipe?",
+            "default-recipe-name": "New Recipe",
+            "no-permission": "You don't have permission to open this recipe or book."
+        },
+        "settings": {
+            "enableCauldron": {
+                "name": "Enable Cauldron",
+                "hint": "Enable the Cauldron interface. This will allow players to mix any ingredients together to discover recipes."
+            },
+            "customQuantityPath": {
+                "name": "Custom Quantity Path",
+                "hint": "The path to the item quantity data value (data path starts from 'system', for example if your quantity is stored in item.system.itemQuantity.value you would insert 'itemQuantity.value' in this setting). Leave blank to use the default path, only customize if your system does not use the common path."
+            }
+        }
+    }
+}

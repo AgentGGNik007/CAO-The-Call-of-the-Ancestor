@@ -1,0 +1,117 @@
+{
+    "mastercrafted": {
+        "UI": {
+            "default-recipe-name": "Nouvelle recette",
+            "delete-recipe-book-content": "Voulez-vous vraiment supprimer ce livre de recettes ?",
+            "delete-recipe-book-title": "Supprimer le livre de recettes",
+            "delete-recipe-content": "Voulez-vous vraiment supprimer cette recette ?",
+            "delete-recipe-title": "Supprimer la recette",
+            "no-permission": "Vous n'êtes pas autorisé à ouvrir cette recette ou ce livre.",
+            "open-recipe-app": "Gestionnaire de recettes"
+        },
+        "craft": "Artisanat",
+        "craftDialog": {
+            "cancel": "Annuler",
+            "consumes": "Consomme",
+            "craft": "Artisanat",
+            "crafted": "Fabriqué",
+            "crafts": "Artisanat",
+            "title": "Artisanat"
+        },
+        "recipeApp": {
+            "addRecipeBook": "Ajouter un livre de recettes",
+            "bookcontext": {
+                "add": "Ajouter une recette",
+                "delete": "Supprimer",
+                "duplicate": "Dupliquer",
+                "edit": "Modifier",
+                "export": "Exporter",
+                "import": "Importer"
+            },
+            "configbookrecipe": {
+                "permissions": {
+                    "allow": "Permettre",
+                    "default": "Défaut",
+                    "deny": "Refuser"
+                }
+            },
+            "craft": "Artisanat - Maintenez Ctrl pour artisanat rapide",
+            "craftError": "Erreur de fabrication",
+            "craftFailConsumed": "La fabrication a échoué ! \nLa condition n'était pas remplie et les ingrédients ont été consommés.",
+            "craftFailNotConsumed": "La fabrication a échoué ! \nLa condition n'a pas été remplie et les ingrédients n'ont pas été consommés.",
+            "craftSuccess": "Fabrication réussie ! \nAjouté à l'inventaire :",
+            "craftSuccessTimed": "Fabrication réussie ! \nLes objets suivants seront ajoutés une fois la fabrication terminée :",
+            "editcreatebook": {
+                "book": "Livre",
+                "confirm": "Confirmer",
+                "create": "Créer",
+                "description": "Description",
+                "edit": "Modifier",
+                "image": "Image",
+                "macro": "Condition",
+                "macroplaceholder": "Nom ou commande de la macro",
+                "name": "Nom",
+                "namep": "Nouveau livre",
+                "permission": "Autorisation du joueur",
+                "recipe": "Recette",
+                "sound": "Son",
+                "time": "Temps",
+                "timeplaceholder": "Temps de fabrication en minutes",
+                "title": "Modifier/Créer un livre",
+                "tools": "Outils",
+                "toolsplaceholder": "Liste des noms d'outils séparés par des virgules"
+            },
+            "errors": {
+                "alreadyingredient": "Cet article est déjà dans un Ingrédient de cette recette !",
+                "namemissing": "Champ de nom obligatoire !"
+            },
+            "ingredientsTooltip": "Clic gauche pour inspecter les ingrédients, clic droit pour sélectionner un ingrédient",
+            "minutes": "minutes",
+            "noTools": "Outils manquants ! \nVous avez besoin de l'un des éléments suivants :",
+            "recipeconfig": {
+                "ingredients": "Ingrédients",
+                "ingredientsInspection": "Contrôle des ingrédients",
+                "inheritTools": "Outils d'héritage",
+                "productInspection": "Inspection du produit",
+                "result": "Résultat"
+            },
+            "relinked": "Un ou plusieurs éléments manquaient de références et ont été réassociés.",
+            "resultTooltip": "Cliquez sur un objet pour inspecter le résultat ou cliquez sur son conteneur pour le sélectionner comme résultat de fabrication",
+            "searchRecipe": "Rechercher une recette",
+            "time": "Temps de fabrication",
+            "timedCraftCompleted": "Fabrication terminée ! \nAjouté à l'inventaire :",
+            "title": "Mastercrafted",
+            "tools": "Outils requis",
+            "filter": "Basculer Tout/Fabriquable",
+            "cauldron": "Chaudron"
+        },
+        "show-recipes": "Afficher les recettes",
+        "cauldronApp": {
+            "brewFail": "Le brassage a échoué ! \nVotre préparation ne s'est pas bien mélangée. \nLes ingrédients ont été consommés.",
+            "confirm": "Confirmer",
+            "discovered": "Vous avez découvert une nouvelle recette !",
+            "gmConfirm": "Un Game Master devra confirmer cette découverte avant de pouvoir l'utiliser.",
+            "hint": "Faites glisser et déposez les ingrédients dans le chaudron pour les mélanger. \nCliquez sur un ingrédient pour le retirer du chaudron. \nCliquez sur le bouton « Mélanger les ingrédients » pour mélanger les ingrédients ensemble. \nSi les ingrédients se mélangent bien, vous découvrirez une nouvelle recette. \nLes ingrédients seront consommés.",
+            "noIngredients": "Il faut mélanger au moins deux ingrédients pour découvrir une recette !",
+            "partial": {
+                "consumed": "Consommé :",
+                "extra1": "C'était si proche ! \nVous l'avez presque eu ! \nPeut-être que vous en avez ajouté un peu trop.",
+                "extra1missing1": "On aurait dit que ça allait marcher, mais ce n’est pas le cas. \nPeut-être que vous avez ajouté trop de quelque chose et pas assez d'autre chose.",
+                "extra2": "On aurait dit que ça allait marcher, mais ce n’est pas le cas. \nPeut-être que vous en avez trop ajouté.",
+                "missing1": "C'était si proche ! \nVous l'avez presque eu ! \nIl en faut peut-être un peu plus.",
+                "missing2": "On aurait dit que ça allait marcher, mais ce n’est pas le cas. \nPeut-être qu'il a besoin de plus de quelque chose."
+            },
+            "title": "Chaudron"
+        },
+        "settings": {
+            "enableCauldron": {
+                "hint": "Activez l'interface du Chaudron. \nCela permettra aux joueurs de mélanger n’importe quel ingrédient pour découvrir des recettes.",
+                "name": "Activer le chaudron"
+            },
+            "customQuantityPath": {
+                "hint": "Le chemin d'accès à la valeur des données de quantité d'article (le chemin des données commence à partir de « système », par exemple, si votre quantité est stockée dans item.system.itemQuantity.value, vous insérerez « itemQuantity.value » dans ce paramètre). \nLaissez vide pour utiliser le chemin par défaut, personnalisez-le uniquement si votre système n'utilise pas le chemin commun.",
+                "name": "Chemin de quantité personnalisé"
+            }
+        }
+    }
+}

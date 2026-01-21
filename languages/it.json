@@ -1,0 +1,117 @@
+{
+    "mastercrafted": {
+        "UI": {
+            "default-recipe-name": "Nuova ricetta",
+            "delete-recipe-book-content": "Sei sicuro di voler eliminare questo ricettario?",
+            "delete-recipe-book-title": "Elimina ricettario",
+            "delete-recipe-content": "Sei sicuro di voler eliminare questa ricetta?",
+            "delete-recipe-title": "Elimina ricetta",
+            "no-permission": "Non sei autorizzato ad aprire questa ricetta o questo libro.",
+            "open-recipe-app": "Responsabile ricette"
+        },
+        "craft": "Creazione",
+        "craftDialog": {
+            "cancel": "Annulla",
+            "consumes": "Consuma",
+            "craft": "Mestiere",
+            "crafted": "Realizzato",
+            "crafts": "Artigianato",
+            "title": "Creazione"
+        },
+        "recipeApp": {
+            "addRecipeBook": "Aggiungi ricettario",
+            "bookcontext": {
+                "add": "Aggiungi ricetta",
+                "delete": "Eliminare",
+                "duplicate": "Duplicare",
+                "edit": "Modificare",
+                "export": "Esportare",
+                "import": "Importare"
+            },
+            "configbookrecipe": {
+                "permissions": {
+                    "allow": "Permettere",
+                    "default": "Predefinito",
+                    "deny": "Negare"
+                }
+            },
+            "craft": "Crea - Tieni premuto Ctrl per creare velocemente",
+            "craftError": "Errore di creazione",
+            "craftFailConsumed": "Creazione fallita! \nLa condizione non è stata soddisfatta e gli ingredienti sono stati consumati.",
+            "craftFailNotConsumed": "Creazione fallita! \nLa condizione non è stata soddisfatta e gli ingredienti non sono stati consumati.",
+            "craftSuccess": "Creazione riuscita! \nAggiunto all'inventario:",
+            "craftSuccessTimed": "Creazione riuscita! \nI seguenti elementi verranno aggiunti una volta completata la creazione:",
+            "editcreatebook": {
+                "book": "Libro",
+                "confirm": "Confermare",
+                "create": "Creare",
+                "description": "Descrizione",
+                "edit": "Modificare",
+                "image": "Immagine",
+                "macro": "Condizione",
+                "macroplaceholder": "Nome macro o comando",
+                "name": "Nome",
+                "namep": "Nuovo libro",
+                "permission": "Autorizzazione del giocatore",
+                "recipe": "Ricetta",
+                "sound": "Suono",
+                "time": "Tempo",
+                "timeplaceholder": "Tempo di creazione in minuti",
+                "title": "Modifica/Crea libro",
+                "tools": "Utensili",
+                "toolsplaceholder": "Elenco separato da virgole dei nomi degli strumenti"
+            },
+            "errors": {
+                "alreadyingredient": "Questo articolo è già in un ingrediente di questa ricetta!",
+                "namemissing": "Campo nome obbligatorio!"
+            },
+            "ingredientsTooltip": "Fare clic con il tasto sinistro per ispezionare gli ingredienti, fare clic con il tasto destro per selezionare un ingrediente",
+            "minutes": "minuti",
+            "noTools": "Strumenti mancanti! \nHai bisogno di uno di:",
+            "recipeconfig": {
+                "ingredients": "ingredienti",
+                "ingredientsInspection": "Ispezione degli ingredienti",
+                "inheritTools": "Eredita strumenti",
+                "productInspection": "Ispezione del prodotto",
+                "result": "Risultato"
+            },
+            "relinked": "A uno o più elementi mancavano i riferimenti e sono stati ricollegati.",
+            "resultTooltip": "Fai clic su un oggetto per ispezionare il risultato o fai clic sul suo contenitore per selezionarlo come risultato di creazione",
+            "searchRecipe": "Cerca Ricetta",
+            "time": "Tempo di creazione",
+            "timedCraftCompleted": "Creazione completata! \nAggiunto all'inventario:",
+            "title": "Masterizzato",
+            "tools": "Strumenti richiesti",
+            "filter": "Attiva/disattiva Tutto/Creabile",
+            "cauldron": "Calderone"
+        },
+        "show-recipes": "Mostra ricette",
+        "cauldronApp": {
+            "brewFail": "Produzione di birra fallita! \nLa tua miscela non si è amalgamata bene. \nGli ingredienti erano consumati.",
+            "confirm": "Confermare",
+            "discovered": "Hai scoperto una nuova ricetta!",
+            "gmConfirm": "Un Game Master dovrà confermare questa scoperta prima che possa essere utilizzata.",
+            "hint": "Trascina e rilascia gli ingredienti nel calderone per mescolarli insieme. \nFare clic su un ingrediente per rimuoverlo dal calderone. \nFare clic sul pulsante \"Mescola ingredienti\" per mescolare gli ingredienti insieme. \nSe gli ingredienti si amalgamano bene, scoprirai una nuova ricetta. \nGli ingredienti verranno consumati.",
+            "noIngredients": "Devi mescolare almeno due ingredienti per scoprire una ricetta!",
+            "partial": {
+                "consumed": "Consumato:",
+                "extra1": "Era così vicino! \nCe l'avevi quasi fatta! \nForse hai aggiunto un po' troppo.",
+                "extra1missing1": "Sembrava che avrebbe funzionato, ma non è stato così. \nForse hai aggiunto troppo di qualcosa e non abbastanza di qualcos'altro.",
+                "extra2": "Sembrava che avrebbe funzionato, ma non è stato così. \nForse hai aggiunto troppo.",
+                "missing1": "Era così vicino! \nCe l'avevi quasi fatta! \nForse serve un po' di più.",
+                "missing2": "Sembrava che avrebbe funzionato, ma non è stato così. \nForse ha bisogno di più di qualcosa."
+            },
+            "title": "Calderone"
+        },
+        "settings": {
+            "enableCauldron": {
+                "hint": "Abilita l'interfaccia del Calderone. \nCiò consentirà ai giocatori di mescolare insieme tutti gli ingredienti per scoprire ricette.",
+                "name": "Abilita Calderone"
+            },
+            "customQuantityPath": {
+                "hint": "Il percorso del valore dei dati della quantità dell'articolo (il percorso dei dati inizia da \"system\", ad esempio se la quantità è archiviata in item.system.itemQuantity.value, inseriresti \"itemQuantity.value\" in questa impostazione). \nLascia vuoto per utilizzare il percorso predefinito, personalizzalo solo se il tuo sistema non utilizza il percorso comune.",
+                "name": "Percorso quantità personalizzato"
+            }
+        }
+    }
+}
