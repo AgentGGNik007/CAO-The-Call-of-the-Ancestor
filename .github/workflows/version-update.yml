@@ -62,7 +62,7 @@ jobs:
           git tag "${{ steps.bump.outputs.tag }}"
           git push origin "${{ steps.bump.outputs.tag }}"
 
-            - name: Sync version to update branch (module.json)
+      - name: Sync version to update branch (module.json)
         env:
           VERSION: ${{ steps.bump.outputs.version }}
         run: |
