@@ -8,7 +8,7 @@
     {
       "name": "Niklas",
       "url": "https://github.com/AgentGGNik007"
-    },
+    }
   ],
 
   "license": "MIT",
@@ -53,7 +53,7 @@
   ],
 
   "styles": [
-    "styles/module.css",
+    "styles/module.css"
   ],
 
   "packs": [
