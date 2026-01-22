@@ -1,0 +1,15 @@
+{
+  "_id": "mag_20_psn",
+  "name": "Magazin 20 (PSN)",
+  "type": "loot",
+  "folder": "F_MAG_BASE",
+  "system": {
+    "description": { "value": "<p>A 20-round magazine (PSN).</p>", "chat": "" },
+    "quantity": 1,
+    "weight": { "value": 0, "units": "lb" },
+    "price": { "value": 0, "denomination": "cp" },
+    "identified": true
+  },
+  "effects": [],
+  "flags": {}
+}
