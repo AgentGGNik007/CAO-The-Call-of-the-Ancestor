@@ -1,8 +1,0 @@
-{
-  "_id": "F_MAG_BASE",
-  "name": "Magazines – Base",
-  "type": "Item",
-  "sorting": "a",
-  "sort": 200000,
-  "flags": {}
-}
