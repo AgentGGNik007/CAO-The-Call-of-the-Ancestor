@@ -1,0 +1,15 @@
+{
+  "_id": "mag_5_psn",
+  "name": "Magazin 5 (PSN)",
+  "type": "loot",
+  "folder": "F_MAG_BASE",
+  "system": {
+    "description": { "value": "<p>A 5-round magazine (PSN).</p>", "chat": "" },
+    "quantity": 1,
+    "weight": { "value": 0, "units": "lb" },
+    "price": { "value": 0, "denomination": "cp" },
+    "identified": true
+  },
+  "effects": [],
+  "flags": {}
+}

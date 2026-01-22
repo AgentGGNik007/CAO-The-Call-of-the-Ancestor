@@ -1,0 +1,8 @@
+{
+  "_id": "F_MAG_EMPTY",
+  "name": "Magazines – Empty",
+  "type": "Item",
+  "sorting": "a",
+  "sort": 400000,
+  "flags": {}
+}

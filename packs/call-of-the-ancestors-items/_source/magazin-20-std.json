@@ -1,0 +1,15 @@
+{
+  "_id": "mag_20_std",
+  "name": "Magazin 20 (STD)",
+  "type": "loot",
+  "folder": "F_MAG_BASE",
+  "system": {
+    "description": { "value": "<p>A 20-round magazine (STD).</p>", "chat": "" },
+    "quantity": 1,
+    "weight": { "value": 0, "units": "lb" },
+    "price": { "value": 0, "denomination": "cp" },
+    "identified": true
+  },
+  "effects": [],
+  "flags": {}
+}

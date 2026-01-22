@@ -1,0 +1,15 @@
+{
+  "_id": "bolt",
+  "name": "Bolt",
+  "type": "loot",
+  "folder": "F_MATERIALS",
+  "system": {
+    "description": { "value": "<p>Crafting material.</p>", "chat": "" },
+    "quantity": 1,
+    "weight": { "value": 0, "units": "lb" },
+    "price": { "value": 2, "denomination": "cp" },
+    "identified": true
+  },
+  "effects": [],
+  "flags": {}
+}

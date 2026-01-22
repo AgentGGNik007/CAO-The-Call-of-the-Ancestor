@@ -1,0 +1,58 @@
+{
+  "_id": "faerie_fire_cao",
+  "name": "Faerie Fire (CAO)",
+  "type": "spell",
+  "img": "icons/magic/fire/projectile-meteor-salvo-strong-teal.webp",
+  "folder": "F_SPELLS_CAO",
+  "system": {
+    "description": {
+      "value": "<p>CAO: Cast requires exactly one target. The module prompts a Dexterity save against your spell save DC. On a failed save, the target is marked and concentration begins. When concentration ends, the mark is removed. No spell slots or uses are consumed.</p>",
+      "chat": ""
+    },
+    "level": 1,
+    "school": "evo",
+    "properties": ["vocal", "concentration"],
+    "materials": { "value": "", "consumed": false, "cost": 0, "supply": 0 },
+    "target": {
+      "template": { "contiguous": false, "units": "ft" },
+      "affects": { "count": "1", "type": "creature", "choice": false, "special": "" }
+    },
+    "range": { "value": "60", "units": "ft" },
+    "activation": { "type": "action", "value": 1, "condition": "" },
+    "duration": { "value": "1", "units": "minute" },
+    "uses": { "max": "", "recovery": [], "spent": 0 },
+    "activities": {
+      "dnd5eactivity000": {
+        "_id": "dnd5eactivity000",
+        "name": "Cast (CAO)",
+        "type": "save",
+        "activation": { "type": "action", "override": false },
+        "save": { "ability": ["dex"], "dc": { "calculation": "spellcasting" } },
+        "damage": { "onSave": "none", "parts": [] },
+        "target": {
+          "prompt": true,
+          "template": { "contiguous": false, "units": "ft" },
+          "affects": { "count": "1", "type": "creature", "choice": false, "special": "" },
+          "override": false
+        },
+        "consumption": { "scaling": { "allowed": false }, "spellSlot": false, "targets": [] },
+        "duration": { "units": "inst", "concentration": false, "override": false },
+        "effects": [],
+        "uses": { "spent": 0, "recovery": [] },
+        "flags": {
+          "cao-action": "ff-cast",
+          "cao-token-flag": "cao-ff-token"
+        },
+        "sort": 10
+      }
+    },
+    "identifier": "faerie-fire-cao",
+    "method": "spell",
+    "prepared": 0
+  },
+  "effects": [],
+  "flags": {
+    "cao-spell": true,
+    "cao-faerie-fire": true
+  }
+}
