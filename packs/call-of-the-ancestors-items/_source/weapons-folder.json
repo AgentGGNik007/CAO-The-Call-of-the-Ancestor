@@ -1,8 +1,0 @@
-{
-  "_id": "F_WEAPONS",
-  "name": "Weapons",
-  "type": "Item",
-  "sorting": "a",
-  "sort": 500000,
-  "flags": {}
-}
