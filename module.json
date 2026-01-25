@@ -31,7 +31,31 @@
       }
     ]
   },
-  "languages": [
+  "esmodules": [
+    "scripts/config.js",
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [
+    {
+      "name": "call-of-the-ancestors-items",
+      "label": "Items",
+      "path": "packs/call-of-the-ancestors-items",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "GAMEMASTER": "OWNER"
+      }
+    }
+  ],
+  "url": "https://github.com/AgentGGNik007/CAO-The-Call-of-the-Ancestor",
+  "manifest": "https://raw.githubusercontent.com/AgentGGNik007/CAO-The-Call-of-the-Ancestor/main/module.json",
+  "download": "https://github.com/AgentGGNik007/CAO-The-Call-of-the-Ancestor/releases/latest/download/module-latest.zip",
+  "language": [
     {
       "lang": "en",
       "name": "English",
@@ -72,29 +96,5 @@
       "name": "中文",
       "path": "languages/cn.json"
     }
-  ],
-  "esmodules": [
-    "scripts/config.js",
-    "scripts/main.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
-  "packs": [
-    {
-      "name": "call-of-the-ancestors-items",
-      "label": "Items",
-      "path": "packs/call-of-the-ancestors-items",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "ASSISTANT": "OBSERVER",
-        "TRUSTED": "OBSERVER",
-        "GAMEMASTER": "OWNER"
-      }
-    }
-  ],
-  "url": "https://github.com/AgentGGNik007/CAO-The-Call-of-the-Ancestor",
-  "manifest": "https://raw.githubusercontent.com/AgentGGNik007/CAO-The-Call-of-the-Ancestor/main/module.json",
-  "download": "https://github.com/AgentGGNik007/CAO-The-Call-of-the-Ancestor/releases/latest/download/module-latest.zip"
+  ]
 }
